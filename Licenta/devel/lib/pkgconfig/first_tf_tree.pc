@@ -1,0 +1,8 @@
+prefix=/home/alineitudor/Licenta/devel
+
+Name: first_tf_tree
+Description: Description of first_tf_tree
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
