@@ -1,6 +1,13 @@
 <launch>
     <include file="$(find rov_tf_tree)/launch/brov_tf_tree.launch"/>
 
+    <include file="$(find bluerov_ros_playground)/launch/user_mav.launch" output="screen"/>
+    <include file="$(find bluerov_ros_playground)/launch/bluerov2_node.launch"/>
+
+    <arg name="record_on" default="true" />
+    <node pkg="rosbag" type="record" name="rosbag_record_hrpsys"
+       args="record -O /home/alineitudor/Licenta-git/BagFiles/Data1.bag /BlueROV2/dummyBiasIMU /BlueROV2/imu/data /mavlink/from /BlueRov2/odom/depth"
+       if="$(arg record_on)" />
 
     <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" clear_params="true" output="screen">
         <param name="frequency" value="25"/>
@@ -12,7 +19,7 @@
         <param name="world_frame" value="world"/>
 
         <param name="imu0" value="/BlueROV2/dummyBiasIMU"/>
-        <param name="imu0_queue_size" value="10000"/>
+        <param name="imu0_queue_size" value="1000"/>
         <param name="imu0_relative" value="false"/>
 
 
@@ -47,4 +54,5 @@
     <arg name="imu_start_delay" default="0.2"/>
     <node pkg="rov_tf_tree" name="barometer" type="Bar30_read.py" output="screen" launch-prefix="bash -c 'sleep $(arg barometer_start_delay); $0 $@' "></node>
     <node pkg="rov_tf_tree" name="imu" type="IMU_comp_bias.py" output="screen"/><!-- launch-prefix="bash -c 'sleep $(arg imu_start_delay); $0 $@' "></node-->
+
 </launch>

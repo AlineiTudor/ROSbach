@@ -1,4 +1,4 @@
-prefix=/home/alineitudor/Licenta/install
+prefix=/home/alineitudor/Licenta-git/install
 
 Name: robot_localization
 Description: Description of robot_localization

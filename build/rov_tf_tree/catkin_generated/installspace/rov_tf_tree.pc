@@ -1,4 +1,4 @@
-prefix=/home/alineitudor/Licenta/install
+prefix=/home/alineitudor/Licenta-git/install
 
 Name: rov_tf_tree
 Description: Description of rov_tf_tree

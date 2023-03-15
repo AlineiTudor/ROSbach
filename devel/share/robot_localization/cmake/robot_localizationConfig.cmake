@@ -67,14 +67,14 @@ set(robot_localization_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(robot_localization_SOURCE_PREFIX /home/alineitudor/Licenta/src/robot_localization)
-  set(robot_localization_DEVEL_PREFIX /home/alineitudor/Licenta/devel)
+  set(robot_localization_SOURCE_PREFIX /home/alineitudor/Licenta-git/src/robot_localization)
+  set(robot_localization_DEVEL_PREFIX /home/alineitudor/Licenta-git/devel)
   set(robot_localization_INSTALL_PREFIX "")
   set(robot_localization_PREFIX ${robot_localization_DEVEL_PREFIX})
 else()
   set(robot_localization_SOURCE_PREFIX "")
   set(robot_localization_DEVEL_PREFIX "")
-  set(robot_localization_INSTALL_PREFIX /home/alineitudor/Licenta/install)
+  set(robot_localization_INSTALL_PREFIX /home/alineitudor/Licenta-git/install)
   set(robot_localization_PREFIX ${robot_localization_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(robot_localization_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/alineitudor/Licenta/devel/include;/home/alineitudor/Licenta/src/robot_localization/include;/usr/include/eigen3;/usr/include " STREQUAL " ")
+if(NOT "/home/alineitudor/Licenta-git/devel/include;/home/alineitudor/Licenta-git/src/robot_localization/include;/usr/include/eigen3;/usr/include " STREQUAL " ")
   set(robot_localization_INCLUDE_DIRS "")
-  set(_include_dirs "/home/alineitudor/Licenta/devel/include;/home/alineitudor/Licenta/src/robot_localization/include;/usr/include/eigen3;/usr/include")
+  set(_include_dirs "/home/alineitudor/Licenta-git/devel/include;/home/alineitudor/Licenta-git/src/robot_localization/include;/usr/include/eigen3;/usr/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://ros.org/wiki/robot_localization " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/alineitudor/Licenta/devel/include;/home/alineitudor/Licenta/src/ro
         message(FATAL_ERROR "Project 'robot_localization' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'robot_localization' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/alineitudor/Licenta/src/robot_localization/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'robot_localization' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/alineitudor/Licenta-git/src/robot_localization/${idir}'.  ${_report}")
     endif()
     _list_append_unique(robot_localization_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/alineitudor/Licenta/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/alineitudor/Licenta-git/devel/lib;/home/alineitudor/Licenta/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

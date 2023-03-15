@@ -7,10 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/alineitudor/Licenta/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/alineitudor/Licenta/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/alineitudor/Licenta/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD='/home/alineitudor/Licenta/build'
-export PYTHONPATH="/home/alineitudor/Licenta/devel/lib/python2.7/dist-packages:$PYTHONPATH"
-export ROSLISP_PACKAGE_DIRECTORIES='/home/alineitudor/Licenta/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/alineitudor/Licenta/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/alineitudor/Licenta-git/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/alineitudor/Licenta-git/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/alineitudor/Licenta-git/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/alineitudor/Licenta-git/build'
+export PYTHONPATH="/home/alineitudor/Licenta-git/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/alineitudor/Licenta-git/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/alineitudor/Licenta/src:/home/alineitudor/Licenta-git/src:$ROS_PACKAGE_PATH"

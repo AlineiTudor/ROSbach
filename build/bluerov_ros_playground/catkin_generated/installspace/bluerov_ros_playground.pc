@@ -1,4 +1,4 @@
-prefix=/home/alineitudor/Licenta/install
+prefix=/home/alineitudor/Licenta-git/install
 
 Name: bluerov_ros_playground
 Description: Description of bluerov_ros_playground

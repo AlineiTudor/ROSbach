@@ -6,7 +6,7 @@ from os import path as os_path
 from pkgutil import extend_path
 from sys import path as sys_path
 
-__extended_path = '/home/alineitudor/Licenta/src/bluerov_ros_playground/src'.split(';')
+__extended_path = '/home/alineitudor/Licenta-git/src/bluerov_ros_playground/src'.split(';')
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

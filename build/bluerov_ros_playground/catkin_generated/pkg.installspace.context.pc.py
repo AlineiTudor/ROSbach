@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "bluerov_ros_playground"
-PROJECT_SPACE_DIR = "/home/alineitudor/Licenta/install"
+PROJECT_SPACE_DIR = "/home/alineitudor/Licenta-git/install"
 PROJECT_VERSION = "0.0.0"

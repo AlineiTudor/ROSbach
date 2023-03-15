@@ -1,4 +1,4 @@
-prefix=/home/alineitudor/Licenta/devel
+prefix=/home/alineitudor/Licenta-git/devel
 
 Name: first_tf_tree
 Description: Description of first_tf_tree

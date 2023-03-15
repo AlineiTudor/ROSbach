@@ -1,0 +1,3 @@
+<launch>
+    <include file="$(find bluerov_ros_playground)/launch/bluerov2_node.launch"/>
+</launch>

@@ -1,2 +1,2 @@
 bluerov_ros_playground:first_tf_tree-test:robot_localization:rov_tf_tree
--DCATKIN_DEVEL_PREFIX=/home/alineitudor/Licenta/devel -DCMAKE_INSTALL_PREFIX=/home/alineitudor/Licenta/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/alineitudor/Licenta-git/devel -DCMAKE_INSTALL_PREFIX=/home/alineitudor/Licenta-git/install -G Unix Makefiles

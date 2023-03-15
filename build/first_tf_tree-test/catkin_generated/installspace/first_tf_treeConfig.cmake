@@ -67,14 +67,14 @@ set(first_tf_tree_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(first_tf_tree_SOURCE_PREFIX /home/alineitudor/Licenta/src/first_tf_tree-test)
-  set(first_tf_tree_DEVEL_PREFIX /home/alineitudor/Licenta/devel)
+  set(first_tf_tree_SOURCE_PREFIX /home/alineitudor/Licenta-git/src/first_tf_tree-test)
+  set(first_tf_tree_DEVEL_PREFIX /home/alineitudor/Licenta-git/devel)
   set(first_tf_tree_INSTALL_PREFIX "")
   set(first_tf_tree_PREFIX ${first_tf_tree_DEVEL_PREFIX})
 else()
   set(first_tf_tree_SOURCE_PREFIX "")
   set(first_tf_tree_DEVEL_PREFIX "")
-  set(first_tf_tree_INSTALL_PREFIX /home/alineitudor/Licenta/install)
+  set(first_tf_tree_INSTALL_PREFIX /home/alineitudor/Licenta-git/install)
   set(first_tf_tree_PREFIX ${first_tf_tree_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/alineitudor/Licenta/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/alineitudor/Licenta-git/install/lib;/home/alineitudor/Licenta/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
