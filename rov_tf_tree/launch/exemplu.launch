@@ -1,0 +1,12 @@
+<launch>
+<node pkg="tf" type="static_transform_publisher" name="cupla1" args="0 0 0 0 0 0 1 odom cupla1 100" />
+<node pkg="tf" type="static_transform_publisher" name="cupla2" args="0.5 0.5 0 0 0 0.3826545 0.9238915 cupla1 cupla2 100" />
+<node pkg="tf" type="static_transform_publisher" name="cupla3" args="0.5 0.5 0 0 0 0.1305 0.99144 cupla2 cupla3 100" />
+<node pkg="tf" type="static_transform_publisher" name="cap_robot" args="0.3 0.3 0 0 0 0.2588 0.9659 cupla3 cap_robot 100" />
+</launch>
+<!--launch>
+<node pkg="tf" type="static_transform_publisher" name="Cupla1" args="0 0 0 0 0 0 1 parent cupla1 1000" />
+<node pkg="tf" type="static_transform_publisher" name="Cupla2" args="0.5 0.5 0 0 0 0 1 cupla1 cupla2 1000" />
+<node pkg="tf" type="static_transform_publisher" name="Cupla3" args="0.5 0.5 0 0 0 0 1 cupla2 cupla3 1000" />
+<node pkg="tf" type="static_transform_publisher" name="Cupla4" args="0.3 0.3 0 0 0 0 1 cupla3 cupla4 1000" />
+</launch-->

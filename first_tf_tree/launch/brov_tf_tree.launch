@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="tf" type="static_transform_publisher" name="BRov" args="0.154 0.153 -0.129 0 0 0 1 world Rov_frame 1000"/>
+    <node pkg="tf" type="static_transform_publisher" name="camera" args="0.0078 0.033 0.151 0 0 0 2 Rov_frame camera_frame 1000"/>
+    <node pkg="tf" type="static_transform_publisher" name="pixhawk" args="-0.023 0.020 0.079 0 0 0 3 Rov_frame pixhawk_frame 1000"/>
+    <node pkg="tf" type="static_transform_publisher" name="raspberry" args="-0.003 0.018 0.058 0 0 0 4 Rov_frame raspi_frame 1000"/>
+    <node pkg="tf" type="static_transform_publisher" name="currentLeakSensor" args="0.013 0.000847 0.032 0 0 0 5 Rov_frame cLeak_frame 1000"/>
+    <node pkg="tf" type="static_transform_publisher" name="HallSensor" args="0.020 -0.007 -0.0034 0 0 0 6 Rov_frame hall_frame 1000"/>
+    <node pkg="tf" type="static_transform_publisher" name="Bar30" args="0.016 0.006 -0.166 0 0 0 7 Rov_frame Bar30_frame 1000"/>
+</launch>
