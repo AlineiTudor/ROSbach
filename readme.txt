@@ -33,3 +33,9 @@ Important nodes:
 In BagFiles folder you can find recorded data and additional scripts for data filtering(mean, moving avg, running avg), data preprocessing (changing coord frames for imu or camera data), noise standard deviation computing.
 
 For more details ask Alinei Tudor (tudor_alinei@yahoo.com).
+
+
+BlueROV2 hardware description:
+	https://bluerobotics.com/learn/bluerov2-assembly/#introduction
+Configure BlueROV2 to work woth your computer (software config) (see guide for your Operating system):
+	https://bluerobotics.com/learn/bluerov2-software-setup/
