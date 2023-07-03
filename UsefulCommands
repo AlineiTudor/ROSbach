@@ -1,0 +1,48 @@
+source devel/setup.sh
+
+--start reading sensors
+roslaunch bluerov_ros_playground bluerov2_node.launch
+
+--start the tf tree for rov
+roslaunch rov_tf_tree brov_tf_tree.launch
+
+--start the ekf node for pose estimation
+roslaunch rov_tf_tree pos_est.launch
+
+
+--start listening to imu data for test
+rosrun rov_tf_tree read_imu_data_test.py
+
+--start reading data via mavlink
+roslaunch bluerov_ros_playground user_mav.launch
+
+map_frame: map             
+    odom_frame: odom            
+    base_link_frame: base_footprint 
+    world_frame: odom
+
+
+in fisierul cu .bag file-uri:
+//ca sa inregistrez de pe un anumit topic
+rosbag record -O subset topic 
+
+ca sa dai play la un .bag(trebuie sa fii in fisierul cu .bag file-uri):
+rosbag play -r 2 <your bagfile>(se da play de doua ori mai repede -r 2)
+rosbag play Circle.bag
+rosbag play Line.bag//test2.bag
+rosbag play Semicerc.bag
+rosbag play Square.bag
+
+*******schimba frame_idul din bag file-uri******
+
+complementary filter
+compensare acceleratie la rotatie pe loc
+verifica imu
+depth estimation
+
+token: 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
+
+---TODO-----
+De luat imu data de la mavros
+de lasat presiunea de la ce am facut eu+comparat cu presiunea de la mavors
+
